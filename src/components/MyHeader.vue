@@ -1,8 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg ">
-        <div class="h-100">
-            <img src="/img/spotify.png" alt="" class="h-100">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div class="h-100 ">
+            <img src="/img/spotify.png" alt="" class="h-100 ">
         </div>
+        <slot></slot>
     </nav>
 </template>
 
@@ -11,6 +12,7 @@ export default {
   name: 'MyHeader'
 }
 </script>
+
 <style scoped>
 
 nav{

@@ -1,7 +1,6 @@
 <template>
-  <select name="" id="" class="fw-bolder h-50 me-3" v-bind:value="value"
-    v-on:input="$emit('input', $event.target.value)">
-    <option v-if="showEmpty === true" value="__empty" selected>{{labelEmpty}}</option>
+  <select :name="name" :id="id" class="fw-bolder h-50 me-3" :value="value" @input="$emit('input', $event.target.value)">
+    <option value="" selected>{{ placeholder || 'Scegli un opzione' }}</option>
     <option v-for="opt in options" :key="opt.key" :value="opt.value">{{opt.desc}}</option>
   </select>
 </template>
@@ -9,7 +8,7 @@
 <script>
 export default {
   name: 'MySelect',
-  props: ['value', 'options', 'showEmpty', 'labelEmpty']
+  props: ['name', 'id', 'value', 'options', 'placeholder']
 }
 
 </script>
